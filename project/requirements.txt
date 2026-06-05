@@ -1,0 +1,56 @@
+# ============================================================
+# FILE: requirements.txt + SETUP GUIDE
+# ============================================================
+
+# ── Install on Raspberry Pi ────────────────────────────────
+# Run: pip install -r requirements.txt
+
+RPi.GPIO
+adafruit-circuitpython-dht
+adafruit-io
+RPLCD
+pillow
+requests
+tflite-runtime
+numpy
+picamera2
+
+
+# ============================================================
+# SETUP GUIDE — Follow these steps in order
+# ============================================================
+
+# PHASE 1 — Google Colab (Do this on laptop/PC)
+# ------------------------------------------------
+# 1. Open Google Colab → colab.research.google.com
+# 2. Upload colab/train_model.py
+# 3. Download PlantVillage dataset from Kaggle
+# 4. Upload dataset to Colab or Google Drive
+# 5. Run train_model.py — takes 30-60 mins with free GPU
+# 6. Download plant_disease_model.tflite + class_names.txt
+# 7. Copy both files to Raspberry Pi
+
+# PHASE 2 — Raspberry Pi Setup
+# ------------------------------------------------
+# 1. Flash Raspberry Pi OS to MicroSD
+# 2. Enable I2C, SPI, Camera in raspi-config
+#    sudo raspi-config → Interface Options
+# 3. Connect all sensors per config.py pin numbers
+# 4. Install dependencies:
+#    pip install -r requirements.txt
+# 5. Edit config.py with your API keys and credentials
+# 6. Test each sensor individually:
+#    python3 sensors.py
+# 7. Test LCD display:
+#    python3 display.py
+# 8. Test camera:
+#    python3 camera.py
+# 9. Run full system:
+#    python3 main.py
+
+# PHASE 3 — Auto Start on Boot (Optional)
+# ------------------------------------------------
+# To make system start automatically when Pi powers on:
+# sudo nano /etc/rc.local
+# Add before exit 0:
+#   python3 /home/pi/project/pi/main.py &
