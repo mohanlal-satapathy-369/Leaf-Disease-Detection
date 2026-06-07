@@ -1,10 +1,10 @@
-# IoT Smart Plant Disease Detection 🌿
+# IoT Smart Plant Disease Detection 
 
 An end-to-end IoT system for real-time plant disease detection and smart farm monitoring, deployed on a **Raspberry Pi 5** using a **TFLite-optimised CNN** trained on the PlantVillage dataset. Covers the full pipeline: model training → post-training quantisation → edge deployment → sensor integration → cloud dashboard.
 
 ---
 
-## 🧠 ML Model
+##  ML Model
 
 | Attribute | Detail |
 |---|---|
@@ -18,7 +18,7 @@ An end-to-end IoT system for real-time plant disease detection and smart farm mo
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```
 PlantVillage Dataset
@@ -45,7 +45,7 @@ TFLite Quantisation (INT8)
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Leaf-Disease-Detection/
@@ -66,7 +66,7 @@ Leaf-Disease-Detection/
 
 ---
 
-## ⚙️ Setup & Installation
+##  Setup & Installation
 
 ### Prerequisites
 - Raspberry Pi 5 (or compatible)
@@ -107,7 +107,7 @@ python train_model.py
 
 ---
 
-## 🔧 GPIO Pin Configuration (BCM Mode)
+##  GPIO Pin Configuration (BCM Mode)
 
 | Sensor | GPIO Pin |
 |---|---|
@@ -123,7 +123,7 @@ python train_model.py
 
 ---
 
-## 🌡️ Alert Thresholds
+## Alert Thresholds
 
 | Parameter | Threshold |
 |---|---|
@@ -136,7 +136,7 @@ python train_model.py
 
 ---
 
-## ☁️ Cloud Dashboard
+## Cloud Dashboard
 
 Sensor telemetry streams to **Adafruit IO** via MQTT, providing a real-time dashboard for:
 - Temperature & humidity trends
@@ -147,7 +147,7 @@ Sensor telemetry streams to **Adafruit IO** via MQTT, providing a real-time dash
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **ML:** TensorFlow Lite, MobileNetV2, PlantVillage dataset
 - **Hardware:** Raspberry Pi 5, DHT22, soil sensor, PIR, ultrasonic, MQ-2, relay
@@ -157,7 +157,7 @@ Sensor telemetry streams to **Adafruit IO** via MQTT, providing a real-time dash
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Mohanlal Satapathy**  
 BTech CSE, Silicon Institute of Technology, Bhubaneswar  
